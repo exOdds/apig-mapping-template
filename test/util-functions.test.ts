@@ -66,8 +66,12 @@ describe("escapeJavaScript", () => {
 		expect(escapeJavaScript(`{"key":"value"}`)).toBe(`{\"key\":\"value\"}`);
 	});
 
-	test("should escape a string with special characters", () => {
+	test("should escape a string with escaped characters", () => {
 		expect(escapeJavaScript(`{"key\n":"value","key2":"value2"}"`)).toBe(`{\"key\\u000a\":\"value\",\"key2\":\"value2\"}\"`);
+	});
+
+	test("should escape a string with special characters", () => {
+		expect(escapeJavaScript(`Hello, World!@#$%^&*()`)).toBe(`Hello, World!@#$%^&*()`);
 	});
 })
 

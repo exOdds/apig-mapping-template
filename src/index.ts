@@ -15,6 +15,11 @@ const render = (template: string, payload: string, params?: Map<string, string>,
 
 	const data = {
 
+		/**
+		 * The $input namespace provides access to the input payload and headers.
+		 * 
+		 * @see https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#input-variable-reference
+		 */
 		input: {
 			body: payload,
 		},
