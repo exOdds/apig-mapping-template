@@ -1,5 +1,5 @@
 import { Compile, parse} from "velocityjs";
-import { base64Decode, base64Encode, escapeJavascript, parseJson, urlDecode, urlEncode } from "./util-functions"
+import { base64Decode, base64Encode, escapeJavaScript, parseJson, urlDecode, urlEncode } from "./util-functions"
 
 /**
  * Renders a mapping template given a template string, payload, and optional parameters and context.
@@ -25,7 +25,7 @@ const render = (template: string, payload: string, params?: Map<string, string>,
 		 * @see https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#util-template-reference
 		 */
 		util: {
-			escapeJavascript,
+			escapeJavaScript,
 			parseJson,
 
 			urlEncode,

@@ -69,10 +69,10 @@ for (var code = 0; code < 20; code++) {
  * @param input The string to escape.
  * @returns The escaped string.
  */
-export const escapeJavascript = (input: string): string => {
+export const escapeJavaScript = (input: string): string => {
 	return input.split("").map((c) => {
 		return escapeJavaScriptTable[c] || c;
-	}).join();
+	}).join("");
 }
 
 /**
